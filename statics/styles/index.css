@@ -1,0 +1,227 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1140px;
+}
+
+
+.header {
+    font-family: 'Unbounded', sans-serif; 
+    background-color: rgb(255, 171, 0, 0.64);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu-list {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list__right {
+    gap: 18px;
+}
+
+.logo {
+    width: 105px;
+    height: 24px;
+}
+
+.logo-img {
+    width: 105px;
+    height: 24px;
+}
+
+.menu-item {
+
+}
+
+.menu-link {
+
+}
+
+.hero {
+    background-image: url("../images/index/Image\ Placeholder.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    color: #121212;
+}
+
+.hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.hero__box {
+    width: 600px;
+}
+
+.hero__title {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 60px;
+}
+
+.hero__title span {
+    color: #377DFF;
+}
+
+.hero__text {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 15px 0 28px 0;
+}
+
+.hero__btn {
+    padding: 15px 56px;
+    color: #fff;
+    background-color: #121212;
+    border-radius: 8px;
+    transition: background-color 0.3s linear;
+}
+
+.hero__btn:hover {
+    background-color: #377DFF;
+}
+
+
+.arrivals {
+}
+
+.container-right {
+    padding-left: 10px;
+    margin-left: calc((100% - 1140px) / 2);
+}
+
+
+.brands-logos {
+    margin-top: 40px;
+}
+
+.brands-logos__list {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 0 24px
+}
+
+
+.arrivals{
+    margin-top: 88px;
+}
+
+.arrivals__title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+} 
+
+.swiper {
+    height: 600px;
+    width: 100%;
+}
+
+.swiper-slide {
+    width: 262px;
+}
+
+.swiper-pagination {
+    position: static;
+    align-self: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: #6C7275;
+    width: 8px;
+    height: 8px;
+}
+
+.swiper-pagination-bullet-active {
+    position: relative;
+    background-color: transparent;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #141718;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active::after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    top: 4px; 
+    left: 4px;
+    background-color: #141718;
+    border-radius: 50%;
+}
+
+.swiper__title-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 48px 0;
+    width: 1140px;
+    padding-right: 10px;
+}
+
+.arrivals__card {
+
+}
+
+.arrivals__card-img {
+    background: #F3F5F7;
+}
+
+.arrivals__card-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 12px 0 0 0;
+}
+
+.arrivals__card-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 4px 0 0 0;
+}
+
+
