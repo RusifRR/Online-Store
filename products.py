@@ -1,3 +1,5 @@
+from sqlalchemy import delete
+
 from database import SessionLocal
 from models import Product, ProductCategory
 
@@ -10,7 +12,7 @@ with SessionLocal() as db:
                 price=19990,
                 quantity=100,
                 category=ProductCategory.headband,
-                image_url="Skullcandy - Crusher anc 2 wireless headphones"
+                image_url="Skullcandy - Crusher anc 2 wireless headphones.png"
             ),
             Product(
                 name="Beats Studio Pro",
@@ -18,7 +20,7 @@ with SessionLocal() as db:
                 price=29990,
                 quantity=100,
                 category=ProductCategory.headband,
-                image_url="Beats Studio Pro"
+                image_url="Beats Studio Pro.png"
             ),
             Product(
                 name="Sony - WH-CH720N Wireless Noise Canceling",
@@ -26,7 +28,7 @@ with SessionLocal() as db:
                 price=14990,
                 quantity=100,
                 category=ProductCategory.headband,
-                image_url="Sony - WH-CH720N Wireless Noise Canceling"
+                image_url="Sony - WH-CH720N Wireless Noise Canceling.png"
             ),
             Product(
                 name="Skullcandy - Rail True Wireless Earbuds",
@@ -34,7 +36,7 @@ with SessionLocal() as db:
                 price=6990,
                 quantity=100,
                 category=ProductCategory.earbuds,
-                image_url="Skullcandy - Rail True Wireless Earbuds"
+                image_url="Skullcandy - Rail True Wireless Earbuds.png"
             ),
             Product(
                 name="Beats Fit Pro",
@@ -42,7 +44,7 @@ with SessionLocal() as db:
                 price=20990,
                 quantity=100,
                 category=ProductCategory.headband,
-                image_url="Beats Fit Pro"
+                image_url="Beats Fit Pro.png"
             ),
             Product(
                 name="Sony - WH-1000XM5 Wireless Noise Canceling",
@@ -50,7 +52,7 @@ with SessionLocal() as db:
                 price=29990,
                 quantity=100,
                 category=ProductCategory.headband,
-                image_url="Sony - WH-1000XM5 Wireless Noise Canceling",
+                image_url="Sony - WH-1000XM5 Wireless Noise Canceling.png",
             ),
             Product(
                 name="JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports",
@@ -58,7 +60,7 @@ with SessionLocal() as db:
                 price=30990,
                 quantity=100,
                 category=ProductCategory.earbuds,
-                image_url="JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports"
+                image_url="JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports.png"
             ),
             Product(
                 name="Bose QuietComfort Headphones",
@@ -66,7 +68,7 @@ with SessionLocal() as db:
                 price=29990,
                 quantity=100,
                 category=ProductCategory.headband,
-                image_url="Bose QuietComfort Headphones"
+                image_url="Bose QuietComfort Headphones.png"
             ),
             Product(
                 name="AKG Y600NC Wireless",
@@ -74,12 +76,15 @@ with SessionLocal() as db:
                 price=34990,
                 quantity=100,
                 category=ProductCategory.earbuds,
-                image_url="AKG Y600NC Wireless"
+                image_url="AKG Y600NC Wireless.png"
             )
         ]    
     )
     
     db.commit()
+    
+    # db.execute(delete(Product))
+    # db.commit()
 
 
     

@@ -1,7 +1,8 @@
 from datetime import UTC, datetime, timedelta
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, Response, status
+from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
+from fastapi.templating import Jinja2Templates
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
@@ -17,6 +18,8 @@ from models import User
 from schemas import UserLogin, UserRegister, UserResponse
 
 router = APIRouter()
+
+template = Jinja2Templates(directory="templates")
 
 
 @router.post('/register', response_model=UserResponse, status_code=status.HTTP_201_CREATED)

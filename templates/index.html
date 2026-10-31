@@ -102,7 +102,18 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide">
+                        {% for product in products %}
+                            <div class="swiper-slide">
+                                <div class="arrivals__card">
+                                    <div class="arrivals__card-img">
+                                        <img src="../statics/images/index/{{ product.image_url }}" alt="">
+                                    </div>
+                                    <a class="arrivals__card-title">{{ product.name }}</a>
+                                    <a class="arrivals__card-price">{{ product.price }}руб</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <!-- <div class="swiper-slide">
                             <div class="arrivals__card">
                                 <div class="arrivals__card-img">
                                     <img src="../statics/images/index/Skullcandy - Crusher anc 2 wireless headphones.png" alt="">
@@ -173,16 +184,7 @@
                                 <p class="arrivals__card-title">Skullcandy - Crusher anc 2 wireless headphones</p>
                                 <p class="arrivals__card-price">19990руб</p>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="arrivals__card">
-                                <div class="arrivals__card-img">
-                                    <img src="../statics/images/index/Skullcandy - Crusher anc 2 wireless headphones.png" alt="">
-                                </div>
-                                <p class="arrivals__card-title">Skullcandy - Crusher anc 2 wireless headphones</p>
-                                <p class="arrivals__card-price">19990руб</p>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- If we need navigation buttons -->
@@ -194,7 +196,119 @@
                 </div>
             </div>
         </section>
+        <section class="shop-collection">
+            <div class="container">
+                <h2 class="shop-collection__title">Виды Продукции</h2>
+                <div class="shop-collection__wrapper">
+                    <div class="shop-collection__left-box">
+                        <div class="shop-collection__left-inner__box">
+                            <img src="../statics/images/index/headband.png" alt="">
+                            <div class="shop-collection__left-inner__text-box">
+                                <h3 class="shop-collection__box__title">Headband</h3>
+                                <a href="" class="shop-collection__box__btn">Перейти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-collection__right-box">
+                        <div class="shop-collection__right-inner__box">
+                            <div class="shop-collection__right-inner__text-box">
+                                <h3 class="shop-collection__box__title">Earbuds</h3>
+                                <a href="" class="shop-collection__box__btn">Перейти</a>
+                            </div>
+                            <img src="../statics/images/index/earbuds.png" alt="">
+                        </div>
+                        <div class="shop-collection__right-inner__box">
+                            <div class="shop-collection__right-inner__text-box">
+                                <h3 class="shop-collection__box__title">Accessories</h3>
+                                <a href="" class="shop-collection__box__btn">Перейти</a>
+                            </div>
+                            <img src="../statics/images/index/accessory.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="instagram">
+            <div class="container">
+                <div class="instagram__inner">
+                    <p class="instagram__subtitle">Лента Новостей</p>
+                    <h2 class="instagram__title">Instagram</h2>
+                    <p class="instagram__text">Следите за нами в социальных сетях, чтобы узнать больше о скидках и акциях</p>
+                    <a href="" class="instagram__btn">@3legant_official</a>
+                    <div class="instagram__img-box">
+                        <img src="../statics/images/index/instagram-img01.jpg" alt="">
+                        <img src="../statics/images/index/instagram-img02.jpg" alt="">
+                        <img src="../statics/images/index/instagram-img03.jpg" alt="">
+                        <img src="../statics/images/index/instagram-img04.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="join">
+            <div class="container">
+                <div class="join__inner">
+                    <h2 class="join__title">Join Our Newsletter</h2>
+                    <p class="join__text">Sign up for deals, new products and promotions</p>
+                    <form action="" class="join__form">
+                        <img src="../statics/images/index/email.svg" alt="" class="join__logo">
+                        <input type="text" class="join__form-input" placeholder="Email address">
+                        <button class="join__form-btn">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <nav class="footer__nav">
+                    <div class="footer__nav-box">
+                        <img src="../statics/images/index/3legant.white.svg" alt="">
+                        <p>Headphone Store</p>
+                    </div>
+                    <ul class="footer-menu">
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Главное</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Продукт</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Блог</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__bottom">
+                    <div class="footer__bottom-box">
+                        <p>Copyright © 2023 3legant. All rights reserved</p>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Terms of Use</a>
+                    </div>
+                    <ul class="menu-social">
+                        <li class="menu-social__item">
+                            <a href="" class="menu-social__link">
+                                <img src="../statics/images/index/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="menu-social__item">
+                            <a href="" class="menu-social__link">
+                                <img src="../statics/images/index/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="menu-social__item">
+                            <a href="" class="menu-social__link">
+                                <img src="../statics/images/index/youtube.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

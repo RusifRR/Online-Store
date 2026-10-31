@@ -44,7 +44,7 @@ class Product(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
     description: Mapped[str] = mapped_column(Text, nullable=False)
-    price: Mapped[float] = mapped_column(Float, nullable=False)
+    price: Mapped[int] = mapped_column(Integer, nullable=False)
     quantity: Mapped[int] = mapped_column(Integer, nullable=False)
     category: Mapped[ProductCategory] = mapped_column(Enum(ProductCategory), nullable=True)
     image_url: Mapped[str] = mapped_column(String(255), nullable=False)
