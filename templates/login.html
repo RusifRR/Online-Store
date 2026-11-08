@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Online Store</title>
+    <link rel="stylesheet" href="../statics/styles/login.css">
+</head>
+<body>
+    <div class="split-screen">
+        <!-- Левая часть с картинкой -->
+        <div class="left-side">
+            <!-- Картинка из папки statics/images/login -->
+            <img src="../statics/images/login/login-bg.jpg" alt="Вход" onerror="this.src='https://via.placeholder.com/800x1080?text=Картинка+для+Входа'">
+        </div>
+
+        <!-- Правая часть с формой -->
+        <div class="right-side">
+            <div class="form-container">
+                <h2>С возвращением!</h2>
+                <p class="subtitle">Введите свои данные для входа</p>
+
+                <!-- Форма. Атрибут action друг заменит на свой маршрут (например, /login) -->
+                <form action="#" method="POST">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" placeholder="********" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Войти</button>
+                </form>
+
+                <p class="redirect-link">Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+                <a href="index.html" class="back-home">← На главную</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
