@@ -1,0 +1,86 @@
+
+.header {
+    margin-bottom: 40px;
+}
+
+.hero {
+    margin-bottom: 20px;
+}
+
+.hero__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__box {
+    max-width: 673px;
+}
+
+.title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 58px; 
+    margin: 0 0 24px 0;
+}
+
+.hero__text {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.contact {
+    margin-bottom: 60px;
+}
+
+.contact__title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.contact__inner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.contact__cards {
+    display: flex;
+    margin-right: 24px;
+    gap: 24px;
+}
+
+.contact__card {
+    width: 357px;
+    height: 156px;
+    background-color: #F3F5F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact__card img {
+    margin-bottom: 16px;
+}
+
+.card__title {
+    margin: 0 0 8px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #6C7275;
+}
+
+.contact__text {
+    max-width: 252px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}

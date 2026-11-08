@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3legant.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('statics', path='/styles/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('statics', path='/styles/contact.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="" class="logo">
+                    <img src="../statics/images/index/3legant..svg" alt="" class="logo-img">
+                </a>
+                <ul class="menu-list menu-list__center">
+                    <li class="menu-item">
+                        <a href="{{ url_for('home') }}" class="menu-link">Главное</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Продукт</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ url_for('contact') }}" class="menu-link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="menu-list menu-list__right">
+                    <li class="menu-item">
+                        <a href="" class="menu-link">
+                            <img src="../statics/images/index/search.svg" alt="Search">
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">
+                            <img src="../statics/images/index/user-circle.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">
+                            <img src="../statics/images/index/shopping bag.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <div class="hero__box">
+                        <h1 class="title">Мы верим в силу звука. Мы увлечены музыкой, которая делает жизнь ярче.</h1>
+                        <p class="hero__text">Наши наушники сочетают передовые технологии, кристально чистое звучание, эргономичный дизайн и премиальные материалы, которые подойдут для любого стиля жизни. Они покоряют своим комфортом, созданы служить годами, оставаясь верными высоким стандартам качества с ноткой современности.</p>
+                    </div>
+                    <img src="../statics/images/contact/headband.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="container">
+                <div class="contact__inner">
+                    <h2 class="contact__title">Наши Контакты</h2>
+                    <div class="contact__cards">
+                        <div class="contact__card">
+                            <img src="../statics/images/contact/store.svg" alt="">
+                            <h4 class="card__title">Адрес</h4>
+                            <a href="" class="contact__text">234 Hai Trieu, Ho Chi Minh City, Viet Nam</a>
+                        </div>
+                        <div class="contact__card">
+                            <img src="../statics/images/contact/call.svg" alt="">
+                            <h4 class="card__title">Номер телефона</h4>
+                            <a href="tel: +84234567890" class="contact__text">+84 234 567 890</a>
+                        </div>
+                        <div class="contact__card">
+                            <img src="../statics/images/contact/mail.svg" alt="">
+                            <h4 class="card__title">Почта</h4>
+                            <a href="mailto: hello@3legant.com" class="contact__text">hello@3legant.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <nav class="footer__nav">
+                    <div class="footer__nav-box">
+                        <img src="../statics/images/index/3legant.white.svg" alt="">
+                        <p>Headphone Store</p>
+                    </div>
+                    <ul class="footer-menu">
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Главное</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Продукт</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Блог</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__bottom">
+                    <div class="footer__bottom-box">
+                        <p>Copyright © 2023 3legant. All rights reserved</p>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Terms of Use</a>
+                    </div>
+                    <ul class="menu-social">
+                        <li class="menu-social__item">
+                            <a href="" class="menu-social__link">
+                                <img src="../statics/images/index/instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="menu-social__item">
+                            <a href="" class="menu-social__link">
+                                <img src="../statics/images/index/facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="menu-social__item">
+                            <a href="" class="menu-social__link">
+                                <img src="../statics/images/index/youtube.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

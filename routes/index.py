@@ -10,7 +10,7 @@ from templates import templates
 
 router = APIRouter()
 
-@router.get("/", include_in_schema=False)
+@router.get("/", name='home', include_in_schema=False)
 def home(request: Request, db: Annotated[Session, Depends(get_db)]):
     """Return home page"""
     products = db.execute(select(Product)).scalars().all()

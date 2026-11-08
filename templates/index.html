@@ -11,7 +11,8 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="../statics/styles/index.css">
+    <link rel="stylesheet" href="{{ url_for('statics', path='/styles/global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('statics', path='/styles/index.css') }}">
 </head>
 <body>
     <header class="header">
@@ -22,13 +23,13 @@
                 </a>
                 <ul class="menu-list menu-list__center">
                     <li class="menu-item">
-                        <a href="" class="menu-link">Главное</a>
+                        <a href="{{ url_for('home') }}" class="menu-link">Главное</a>
                     </li>
                     <li class="menu-item">
                         <a href="" class="menu-link">Продукт</a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">Контакты</a>
+                        <a href="{{ url_for('contact') }}" class="menu-link">Контакты</a>
                     </li>
                 </ul>
                 <ul class="menu-list menu-list__right">
@@ -247,12 +248,12 @@
         <section class="join">
             <div class="container">
                 <div class="join__inner">
-                    <h2 class="join__title">Join Our Newsletter</h2>
-                    <p class="join__text">Sign up for deals, new products and promotions</p>
+                    <h2 class="join__title">Присоединяйтесь К Нашей Рассылке.</h2>
+                    <p class="join__text">Подписывайтесь на специальные предложения, новые продукты и рекламные акции.</p>
                     <form action="" class="join__form">
                         <img src="../statics/images/index/email.svg" alt="" class="join__logo">
                         <input type="text" class="join__form-input" placeholder="Email address">
-                        <button class="join__form-btn">Signup</button>
+                        <button class="join__form-btn">Войти</button>
                     </form>
                 </div>
             </div>
