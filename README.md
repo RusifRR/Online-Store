@@ -41,6 +41,11 @@ python -m venv .venv
 pip install -requirements.txt
 ```
 
+## После нужно запустить файл products.py чтобы главная страница работала корректно
+```
+python products.py
+```
+
 ## Запуск Backend
 ```bash
 uvicorn main:app
