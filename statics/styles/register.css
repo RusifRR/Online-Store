@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #fff;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Manrope', sans-serif;
 }
 
 .split-screen {
@@ -18,7 +18,6 @@ body {
 
 .left-side {
     flex: 1;
-    background-color: #2ecc71; /* Чуть зеленее для регистрации */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,9 +25,8 @@ body {
 }
 
 .left-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 600px;
+    height: 600px;
 }
 
 .right-side {
@@ -84,7 +82,7 @@ body {
 .submit-btn {
     width: 100%;
     padding: 14px;
-    background-color: #2ecc71;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 8px;
@@ -97,6 +95,11 @@ body {
 
 .submit-btn:hover {
     background-color: #27ae60;
+}
+
+.error {
+    color: #d92525;
+    margin-top: 1rem;
 }
 
 .redirect-link {

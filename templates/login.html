@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход - Online Store</title>
+    <title>Вход</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../statics/styles/login.css">
 </head>
 <body>
     <div class="split-screen">
-        <!-- Левая часть с картинкой -->
         <div class="left-side">
-            <!-- Картинка из папки statics/images/login -->
-            <img src="../statics/images/login/login-bg.jpg" alt="Вход" onerror="this.src='https://via.placeholder.com/800x1080?text=Картинка+для+Входа'">
+            <img src="../statics/images/contact/headband.jpg" alt="Вход" onerror="this.src='https://via.placeholder.com/800x1080?text=Картинка+для+Входа'">
         </div>
 
-        <!-- Правая часть с формой -->
+
         <div class="right-side">
             <div class="form-container">
                 <h2>С возвращением!</h2>
                 <p class="subtitle">Введите свои данные для входа</p>
 
-                <!-- Форма. Атрибут action друг заменит на свой маршрут (например, /login) -->
+
                 <form action="#" method="POST">
                     <div class="input-group">
                         <label for="email">Email</label>
@@ -34,9 +39,11 @@
 
                     <button type="submit" class="submit-btn">Войти</button>
                 </form>
-
-                <p class="redirect-link">Нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
-                <a href="index.html" class="back-home">← На главную</a>
+                {% if error %}
+                    <p class="error">{{ error }}</p>
+                {% endif %}
+                <p class="redirect-link">Нет аккаунта? <a href="{{ url_for('register') }}">Зарегистрироваться</a></p>
+                <a href="{{ url_for('home') }}" class="back-home">← На главную</a>
             </div>
         </div>
     </div>

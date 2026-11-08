@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #fff;
     height: 100vh;
-    overflow: hidden; /* Чтобы не было прокрутки */
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
 }
 
 .split-screen {
@@ -19,7 +19,6 @@ body {
 /* Левая сторона с картинкой */
 .left-side {
     flex: 1;
-    background-color: #4a90e2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,9 +26,8 @@ body {
 }
 
 .left-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Картинка заполняет всю область, не искажаясь */
+    width: 600px;
+    height: 600px;
 }
 
 /* Правая сторона с формой */
@@ -86,7 +84,7 @@ body {
 .submit-btn {
     width: 100%;
     padding: 14px;
-    background-color: #4a90e2;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 8px;
@@ -99,6 +97,11 @@ body {
 
 .submit-btn:hover {
     background-color: #357abd;
+}
+
+.error {
+    color: #d92525;
+    margin-top: 1rem;
 }
 
 .redirect-link {

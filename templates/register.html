@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация - Online Store</title>
+    <title>Регистрация</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../statics/styles/register.css">
 </head>
 <body>
     <div class="split-screen">
-        <!-- Левая часть с картинкой -->
         <div class="left-side">
-            <img src="../statics/images/register/register-bg.jpg" alt="Регистрация" onerror="this.src='https://via.placeholder.com/800x1080?text=Картинка+для+Регистрации'">
+            <img src="../statics/images/contact/headband.jpg" alt="Регистрация" onerror="this.src='https://via.placeholder.com/800x1080?text=Картинка+для+Регистрации'">
         </div>
 
-        <!-- Правая часть с формой -->
         <div class="right-side">
             <div class="form-container">
                 <h2>Создать аккаунт</h2>
                 <p class="subtitle">Присоединяйтесь к нам!</p>
 
-                <form action="#" method="POST">
+                <form action="{{ url_for('register') }}" method="post">
                     <div class="input-group">
                         <label for="name">Ваше имя</label>
-                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                        <input type="text" id="name" name="name" placeholder="Иван" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="name">Ваше Фамилия</label>
+                        <input type="text" id="surname" name="surname" placeholder="Иванов" required>
                     </div>
 
                     <div class="input-group">
@@ -32,14 +42,22 @@
                     
                     <div class="input-group">
                         <label for="password">Пароль</label>
-                        <input type="password" id="password" name="password" placeholder="Придумайте пароль" required>
+                        <input type="password" id="password" name="password" placeholder="Придумайте пароль" minlength="8" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Повторите Пароль</label>
+                        <input type="password" id="confirming_password" name="confirming_password" placeholder="Повторите пароль" minlength="8" required>
                     </div>
 
                     <button type="submit" class="submit-btn">Зарегистрироваться</button>
                 </form>
+                {% if error %}
+                    <p class="error">{{ error }}</p>
+                {% endif %}
 
-                <p class="redirect-link">Уже есть аккаунт? <a href="login.html">Войти</a></p>
-                <a href="index.html" class="back-home">← На главную</a>
+                <p class="redirect-link">Уже есть аккаунт? <a href="{{ url_for('login') }}">Войти</a></p>
+                <a href="{{ url_for('home') }}" class="back-home">← На главную</a>
             </div>
         </div>
     </div>
